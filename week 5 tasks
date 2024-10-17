@@ -1,0 +1,44 @@
+TASK 1 
+import java.util.Scanner;
+public class laptop{
+ String brand;
+ laptop(String brand) {
+ this.brand = brand;
+ }
+ void displayBrand() {
+ System.out.println("The Name of Laptop Brand Is: " + brand);
+ }
+ public static void main(String[] args) 
+ {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter laptop brand: ");
+ String brand = sc.nextLine();
+ laptop a = new laptop(brand);
+ a.displayBrand();
+ }
+}
+
+Task 2
+public class name {
+ public static void main(String[] args) {
+ for (int row = 0; row < 6; row++) { 
+ for (int col = 0; col < 5; col++) { 
+ 
+ if ((col == 0 || col == 4) && row != 0) {
+ System.out.print("*");
+ } else if (row == 0 && (col > 0 && col < 4)) {
+ System.out.print("*");
+ } else if (row == 3) { 
+ System.out.print("*");
+ } else {
+ System.out.print(" "); 
+ }
+ }
+ System.out.println(); 
+ }
+ }
+}
+
+
+
+
