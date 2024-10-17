@@ -1,0 +1,108 @@
+package task5;
+public class Task5 {
+ public static void main(String[] args) {
+ Player pl = new Player("SHAHEEN","BOWLER");
+ Player p2 = new Player("NASEEM","WICKETER");
+ Player p3 = new Player("BABAR","CAPTAIN");
+Team t = new Team("PAKISTAN", pl,p2,p3);
+t.print();
+ }
+}
+class Player {
+ String playername;
+ String position;
+ public Player(String playername, String position) {
+ this.playername = playername;
+ this.position = position;
+ }
+ public void display(){
+ System.out.println("NAME OF PLAYER "+playername);
+ System.out.println("HIS POSITION "+position);
+ } 
+}
+class Team {
+ String teamname;
+ Player player;
+ Player player1;
+ Player player2;
+ public Team(String teamname, Player player, Player player1, Player player2) {
+ this.teamname = teamname;
+ this.player = player;
+ this.player1 = player1;
+ this.player2 = player2;
+ }
+ void print(){
+ System.out.println("OUR TEAM NAME"+teamname);
+ player.display();
+ player1.display();
+ player2.display();
+ } 
+}
+
+TASK 2
+
+package javaapplication56;
+class Cpu{
+ String brand;
+ String capacity;
+ public Cpu(String brand, String capacity) {
+ this.brand = brand;
+ this.capacity = capacity;
+ }
+ void display(){
+ System.out.println("BRAND OF CPU IS "+brand);
+ System.out.println("ITS CAPACITY IS "+capacity);
+ }
+}
+class Ram{
+ String brand;
+ String capacity;
+ public Ram(String brand, String capacity) {
+ this.brand = brand;
+ this.capacity = capacity;
+ }
+ void display(){
+ System.out.println("BRAND OF RAM IS "+brand);
+ System.out.println("ITS CAPACITY IS "+capacity);
+ }
+ 
+}
+class Harddrive{
+ String brand;
+ String capacity;
+ public Harddrive(String brand, String capacity) {
+ this.brand = brand;
+ this.capacity = capacity;
+ }
+ void display(){
+ System.out.println("BRAND OF HARDDRIVE IS "+brand);
+ System.out.println("ITS CAPACITY IS "+capacity);
+ }
+ public static void main(String[] args) 
+ {
+ Cpu cpu = new Cpu("WINDOW", "2GB");
+ Ram ram = new Ram("INTEL", "14GB");
+ Harddrive harddrive = new Harddrive("MAC", "16GB");
+ Computer com = new Computer(cpu, ram, harddrive);
+ com.print();
+ }
+ }
+ package javaapplication56;
+public class Computer {
+ Cpu cpu;
+ Ram ram;
+ Harddrive harddrive;
+ public Computer(Cpu cpu, Ram ram, Harddrive harddrive) {
+ this.cpu = cpu;
+ this.ram = ram;
+ this.harddrive = harddrive;
+ }
+ 
+ void print()
+ {
+ System.out.println("COMPUTER COMPONENTS");
+cpu.display();
+ram.display();
+harddrive.display();
+}
+}
