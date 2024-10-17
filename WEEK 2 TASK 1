@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class employee{
+public:
+string name;
+string jobtitle;
+float salary;
+int displayInfo();
+int displayInfo(employee)
+{
+cout<<"NAME"<<name;
+cout<<"JOBTITLE"<<jobtitle;
+cout<<"SAlARY"<<salary;
+}
+};
+int main()
+{
+employee Emp;
+Emp.name="TANI";
+Emp.jobtitle="Engineer";
+Emp.salary=673000;
+cout<<"NAME: " <<Emp.name<<endl;
+cout<<"JOBTITLE: " <<Emp.jobtitle<<endl;
+cout<<"SALARY: " <<Emp.salary<<endl;
+int displayInfo(employee Emp);
+return 0;
+}
