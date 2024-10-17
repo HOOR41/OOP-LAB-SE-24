@@ -1,0 +1,43 @@
+package movietheater;
+public class MOVIETHEATER {
+ private String Title;
+private String Director;
+private int releaseYear;
+//getmethod
+public String getTitle()
+{
+ return Title;
+}
+public String getDirector()
+{
+ return Director;
+} 
+public int getreleaseYear()
+{
+ return releaseYear;
+}
+//setmethod
+public void setTitle(String Title)
+{ 
+this.Title=Title;
+}
+public void setDirector(String Director)
+{
+this.Director=Director;
+}
+public void setreleaseYear(int releaseYear)
+{
+this.releaseYear=releaseYear;
+}
+ public static void main(String[] args) {
+ 
+ Movie m=new Movie();
+ m.setTitle("MATILDA");
+ m.setDirector("LAUCE");
+ m.setreleaseYear(2109);
+ 
+ System.out.println("TITLE:" + m.getTitle());
+ System.out.println("DIRECTOR NAME:" + m.getDirector());
+ System.out.println("RELEASE:" + m.getreleaseYear()); 
+ }
+}
