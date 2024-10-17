@@ -1,0 +1,74 @@
+TASK 1
+public class Student {
+ 
+ String name;
+ String city;
+ int age;
+ 
+ public static void main(String[] args) {
+ 
+ Student s1 = new Student();
+ Student s2 = new Student();
+ 
+ s1.name = "HOOR";
+ s1.city = "ISLAMABAD";
+ s1.age = 19;
+ s2.name = "FAIZA";
+ s2.city = "ISLAMABAD";
+ s2.age = 28;
+ 
+ System.out.println("name:" + s1.name);
+ System.out.println("city:" + s1.city);
+ System.out.println("age:" + s1.age);
+ System.out.println("name:" + s2.name);
+ System.out.println("city:" + s2.city);
+ System.out.println("age:" + s2.age);
+ 
+ }
+}
+
+
+TASK 2
+public class Area {
+ double length;
+ double width;
+ public double calculateArea() {
+ return length * width;
+ }
+ public static void main(String[] args) {
+ Area rect = new Area();
+ rect.length=17;
+ rect.width=5;
+ double result=rect.calculateArea();
+ System.out.println("AREA OF RECTANGLE IS:"+ result);
+ 
+ }
+}
+
+
+Task 3
+public class Computer {
+ String name;
+ String config;
+ double cost;
+ String os;
+ public static Computer createComputer(String name, String config, double cost, String os) {
+ Computer computer = new Computer();
+ computer.name = name;
+ computer.config = config;
+ computer.cost = cost;
+ computer.os = os;
+ return computer;
+ }
+ public void displayDetails() {
+ System.out.println("The Company Name:" + name);
+ System.out.println("Its Configuration:" + config);
+ System.out.println("Its Cost:" + cost);
+ System.out.println("The Operating System: " + os);
+ }
+ public static void main(String[] args) {
+ 
+ Computer appleComputer = createComputer("Apple", "i5", 50000, "IOS");
+ appleComputer.displayDetails();
+ }
+}
